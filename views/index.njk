@@ -1,6 +1,9 @@
-{% extends 'partials/layout.njk' %}
+ {% extends 'partials/layout.njk' %}
 {% block content %}
-    <h1>
-        miks see elu selline on!!! 
-        </h1>
+<form action="/greeting" method="GET">
+         <input type="text" name="name" placeholder="Enter your name here...">
+            <input type="number" name="age" placeholder="How old are you????" max="120">
+            <input type="submit">
+        </form>
+
 {% endblock %}

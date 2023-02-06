@@ -7,9 +7,12 @@ nunjucks.configure('views', {
   autoescape: true,
   express: app
 });
-app.get('/', (req, res) => {
-   //console.log(path.resolve(__dirname, 'index.html'));
-  res.render('index.njk');
+app.get('/greeting', (req, res) => {
+  console.log(req.query.name);
+  res.render('greeting.njk', {
+    name: req.query.name,
+    age: req.query.age
+  });
 });
 
 
